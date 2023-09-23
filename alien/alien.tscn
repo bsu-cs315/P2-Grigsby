@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccnffv47qghcq"]
+
+[ext_resource type="Texture2D" uid="uid://c6k1s07g3nmyh" path="res://alien/alienYellow_stand.png" id="1_f2m4t"]
+[ext_resource type="Script" path="res://alien/alien.gd" id="1_fms5e"]
+[ext_resource type="Texture2D" uid="uid://72oad6xtamx6" path="res://alien/alienYellow_walk1.png" id="2_1abyt"]
+[ext_resource type="Texture2D" uid="uid://doltxnlygxg3x" path="res://alien/alienYellow_jump.png" id="3_1amfy"]
+[ext_resource type="Texture2D" uid="uid://de4rpouydcuks" path="res://alien/alienYellow_walk2.png" id="3_5op1u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2251"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f2m4t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1amfy")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1abyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5op1u")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_058rf"]
+size = Vector2(109, 138)
+
+[node name="Alien" type="CharacterBody2D" groups=["aliens"]]
+script = ExtResource("1_fms5e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n2251")
+animation = &"jump"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 59)
+shape = SubResource("RectangleShape2D_058rf")

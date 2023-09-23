@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://deem85ibepcbg"]
+
+[ext_resource type="PackedScene" uid="uid://ccnffv47qghcq" path="res://alien/alien.tscn" id="1_up166"]
+[ext_resource type="Texture2D" uid="uid://bs8qvgyx4tsaa" path="res://world/grassMid.png" id="2_qwpd4"]
+[ext_resource type="PackedScene" uid="uid://fd5qkmqs2fc2" path="res://objects/key.tscn" id="2_uodjw"]
+[ext_resource type="Texture2D" uid="uid://ckb2dqxkjyhdq" path="res://world/grassHalf.png" id="4_pb8lk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jj04"]
+texture = ExtResource("2_qwpd4")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pipnt"]
+texture = ExtResource("4_pb8lk")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 10, -64, 10.5)
+
+[sub_resource type="TileSet" id="TileSet_n514d"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_0jj04")
+sources/1 = SubResource("TileSetAtlasSource_pipnt")
+
+[node name="World" type="Node2D"]
+
+[node name="Alien" parent="." instance=ExtResource("1_up166")]
+position = Vector2(579, 382)
+
+[node name="key" parent="." instance=ExtResource("2_uodjw")]
+position = Vector2(827, 334)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(640, 520)
+tile_set = SubResource("TileSet_n514d")
+format = 2
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, -65535, 1, 0)
