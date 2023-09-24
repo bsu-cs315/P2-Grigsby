@@ -1,7 +1,7 @@
 # P2-Grigsby
 ## Controls
 Press LEFT/RIGHT to move
-Press SPACE to jump
+<br>Press SPACE to jump
 ## Third-Party Assets
 -[Kenney's Platformer Pack Redux](https://kenney.nl/assets/platformer-pack-redux), licensed under CC0.
 ## Project Report
