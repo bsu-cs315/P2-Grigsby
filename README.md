@@ -1,12 +1,12 @@
 # P2-Grigsby
 ## Controls
-Press left/right to move
-Press space to jump
+Press LEFT/RIGHT to move
+Press SPACE to jump
 ## Third-Party Assets
--[Kenney's Physics Asset](https://kenney.nl/assets/physics-assets), licensed under CC0.
+-[Kenney's Platformer Pack Redux](https://kenney.nl/assets/platformer-pack-redux), licensed under CC0.
 ## Project Report
 ### Reflection
-
+This is the project I've been waiting for.  I've always like platformers, so it's nice to get to try to make a simple one myself.  I couldn't figure out parallax scrolling, but I know that it probably isn't too complicated to implement.  My favorite part so far is getting the camera to work.  It's so simple to add a camera node to the player, but also so rewarding for me to see that I can actually follow the character instead of having the camera locked in place.  According to the checklist, I should get an A.
 ### Evaluation
 - [X] D-1: The repository contains a <code>README.md</code> file in its top-level directory on the default branch.
 - [X] D-2: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of M or less.
@@ -21,7 +21,7 @@ Press space to jump
 - [X] B-1: The project report is complete.
 - [X] B-2: The source code and project structure comply with <a href="https://gdquest.gitbook.io/gdquests-guidelines/godot-gdscript-guidelines">our adopted guidelines</a>.
 - [X] B-3: There is a visual element in the level that the player can interact with, such as a collectible, an enemy, a book, or a switch.
-- [ ] B-4: The camera follows the character through a world that is larger than one screen.
+- [X] B-4: The camera follows the character through a world that is larger than one screen.
 - [X] A-1: Generate neither warnings nor errors at runtime.
 - [X] A-2: Earn one star
 - [X] ⭐ Animate the main character using either <code>AnimatedSprite</code> or cutout animation
