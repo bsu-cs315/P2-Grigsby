@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://deem85ibepcbg"]
+[gd_scene load_steps=11 format=3 uid="uid://deem85ibepcbg"]
 
 [ext_resource type="Texture2D" uid="uid://p2guu115nv7l" path="res://world/colored_grass.png" id="1_1m07n"]
+[ext_resource type="Script" path="res://world/world.gd" id="1_7eb4t"]
 [ext_resource type="PackedScene" uid="uid://ccnffv47qghcq" path="res://alien/alien.tscn" id="1_up166"]
 [ext_resource type="Texture2D" uid="uid://bs8qvgyx4tsaa" path="res://world/grassMid.png" id="2_qwpd4"]
 [ext_resource type="PackedScene" uid="uid://fd5qkmqs2fc2" path="res://objects/key.tscn" id="2_uodjw"]
+[ext_resource type="PackedScene" uid="uid://c16of8mo5wfsg" path="res://hud/hud.tscn" id="3_catmq"]
 [ext_resource type="Texture2D" uid="uid://ckb2dqxkjyhdq" path="res://world/grassHalf.png" id="4_pb8lk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jj04"]
@@ -29,6 +31,7 @@ sources/0 = SubResource("TileSetAtlasSource_0jj04")
 sources/1 = SubResource("TileSetAtlasSource_pipnt")
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_7eb4t")
 
 [node name="ColoredGrass" type="Sprite2D" parent="."]
 position = Vector2(512, 254)
@@ -43,6 +46,12 @@ position = Vector2(579, 382)
 
 [node name="Camera2D" type="Camera2D" parent="Alien"]
 position = Vector2(-3, -57)
+
+[node name="HUD" parent="Alien" instance=ExtResource("3_catmq")]
+offset_left = -579.0
+offset_top = -382.0
+offset_right = -579.0
+offset_bottom = -382.0
 
 [node name="key" parent="." instance=ExtResource("2_uodjw")]
 position = Vector2(827, 334)
