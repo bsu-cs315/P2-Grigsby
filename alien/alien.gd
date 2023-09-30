@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
+signal key_collected(new_keys)
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -550.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+var keys := 0
+var original_keys := 0
 
 @onready var _animated_sprite := $AnimatedSprite2D
 
@@ -37,3 +41,6 @@ func _physics_process(delta):
 		_animated_sprite.scale.x = -1
 
 	move_and_slide()
+	
+	if keys > original_keys:
+		key_collected.emit()
