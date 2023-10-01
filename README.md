@@ -9,7 +9,7 @@ Press LEFT/RIGHT to move
 -[Failure 1.wav from freesound by FunWithSound](https://freesound.org/people/FunWithSound/sounds/394900/)
 ## Project Report
 ### Reflection
-This was hard to do in one week.  I did come up with some good ideas of juice, though.  Most notable were the two I used for the victory screen: the player character dancing using the climbing and ducking sprites, and the color-changing text.  I also used a tween on the title screen.  I think I should get an A.
+This was hard to do in one week.  I did come up with some good ideas of juice, though.  Most notable were the two I used for the victory screen: the player character dancing using the climbing and ducking sprites, and the color-changing text.  I came up with the dancing and color changing on my own because I thought it would be a good look for a victory screen.  I also used a tween on the title screen, which I did because we did it with the previous project.  I think I should get an A.
 ### Evaluation
 - [X] D-1: The repository contains a <code>README.md</code> file in its top-level directory on the default branch.
 - [X] D-2: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of M or less.
