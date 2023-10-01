@@ -3,7 +3,3 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Alien/HUD.set_coin($Coin)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

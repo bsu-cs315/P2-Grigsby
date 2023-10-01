@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2npoytvvnevj"
-path="res://.godot/imported/hudJewel_blue.png-82537d5c539607526f74b3e7bbb11c69.ctex"
+uid="uid://5hr2uywywnu6"
+path="res://.godot/imported/grassCenter.png-e118cddb21c808032d77cbf788b7edd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hud/hudJewel_blue.png"
-dest_files=["res://.godot/imported/hudJewel_blue.png-82537d5c539607526f74b3e7bbb11c69.ctex"]
+source_file="res://world/grassCenter.png"
+dest_files=["res://.godot/imported/grassCenter.png-e118cddb21c808032d77cbf788b7edd9.ctex"]
 
 [params]
 

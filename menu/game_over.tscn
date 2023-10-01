@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://66gma476wymi"]
+
+[ext_resource type="Script" path="res://menu/game_over.gd" id="1_kgekk"]
+
+[node name="Game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kgekk")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 180.0
+offset_right = 505.0
+offset_bottom = 206.0
+scale = Vector2(4, 4)
+text = "Game Over"
+
+[node name="Menu_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 476.0
+offset_top = 336.0
+offset_right = 590.0
+offset_bottom = 367.0
+scale = Vector2(2, 2)
+text = "Back to Menu"
+
+[connection signal="pressed" from="Menu_button" to="." method="_on_menu_button_pressed"]

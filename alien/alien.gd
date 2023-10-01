@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -550.0
+const JUMP_VELOCITY = -700.0
 const SPEED = 300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -37,3 +37,6 @@ func _physics_process(delta):
 		_animated_sprite.scale.x = -1
 
 	move_and_slide()
+	
+	if position.y > 550:
+		get_tree().change_scene_to_file("res://menu/game_over.tscn")

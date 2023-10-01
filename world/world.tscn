@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://deem85ibepcbg"]
+[gd_scene load_steps=15 format=3 uid="uid://deem85ibepcbg"]
 
 [ext_resource type="Texture2D" uid="uid://p2guu115nv7l" path="res://world/colored_grass.png" id="1_1m07n"]
 [ext_resource type="Script" path="res://world/world.gd" id="1_7eb4t"]
@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bs8qvgyx4tsaa" path="res://world/grassMid.png" id="2_qwpd4"]
 [ext_resource type="PackedScene" uid="uid://b1cakiij5lrf2" path="res://objects/coin.tscn" id="2_uodjw"]
 [ext_resource type="PackedScene" uid="uid://c16of8mo5wfsg" path="res://hud/hud.tscn" id="3_catmq"]
-[ext_resource type="Texture2D" uid="uid://ckb2dqxkjyhdq" path="res://world/grassHalf.png" id="4_pb8lk"]
 [ext_resource type="PackedScene" uid="uid://0lg2y3lesi21" path="res://Enemy/enemy.tscn" id="6_oaxft"]
+[ext_resource type="PackedScene" uid="uid://dspyxuqtibadu" path="res://objects/flag.tscn" id="6_omhpv"]
+[ext_resource type="Texture2D" uid="uid://5hr2uywywnu6" path="res://world/grassCenter.png" id="10_21a7a"]
+[ext_resource type="Texture2D" uid="uid://gl0we61bf8de" path="res://world/grassHalf_bottom.png" id="10_g1v85"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0jj04"]
 texture = ExtResource("2_qwpd4")
@@ -17,19 +19,29 @@ texture_region_size = Vector2i(128, 128)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pipnt"]
-texture = ExtResource("4_pb8lk")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_807p3"]
+texture = ExtResource("10_g1v85")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 10, -64, 10.5)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -9, 64, -9, 64, 64, -64, 64)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sy6vu"]
+texture = ExtResource("10_21a7a")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSet" id="TileSet_n514d"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0jj04")
-sources/1 = SubResource("TileSetAtlasSource_pipnt")
+sources/2 = SubResource("TileSetAtlasSource_807p3")
+sources/4 = SubResource("TileSetAtlasSource_sy6vu")
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_7eb4t")
@@ -50,6 +62,9 @@ texture = ExtResource("1_1m07n")
 position = Vector2(3584, 257)
 texture = ExtResource("1_1m07n")
 
+[node name="Flag" parent="." instance=ExtResource("6_omhpv")]
+position = Vector2(4023, 452)
+
 [node name="Alien" parent="." instance=ExtResource("1_up166")]
 position = Vector2(579, 382)
 
@@ -66,10 +81,16 @@ offset_bottom = -382.0
 position = Vector2(1797, 455)
 
 [node name="Coin" parent="." instance=ExtResource("2_uodjw")]
-position = Vector2(831, 323)
+position = Vector2(831, 267)
+
+[node name="Coin2" parent="." instance=ExtResource("2_uodjw")]
+position = Vector2(1091, 13)
+
+[node name="Coin3" parent="." instance=ExtResource("2_uodjw")]
+position = Vector2(2631, 459)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(640, 520)
 tile_set = SubResource("TileSet_n514d")
 format = 2
-layer_0/tile_data = PackedInt32Array(3, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, -65535, 1, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 21, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0)
+layer_0/tile_data = PackedInt32Array(3, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 65535, 0, 0, 65534, 0, 0, 65533, 0, 0, 65532, 0, 0, 65531, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 21, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 22, 0, 0, 23, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, -131071, 2, 0, -262141, 2, 0, -6, 4, 0, -65542, 4, 0, -131078, 4, 0, -196614, 4, 0, -262150, 4, 0, -327686, 4, 0, -65509, 4, 0, -131045, 4, 0, -196581, 4, 0, -262117, 4, 0, -327653, 4, 0, -393189, 4, 0)

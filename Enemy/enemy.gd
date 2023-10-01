@@ -30,3 +30,8 @@ func _on_timer_2_timeout():
 func _on_timer_3_timeout():
 	move_left()
 	$Timer.start()
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("aliens"):
+		get_tree().change_scene_to_file("res://menu/game_over.tscn")

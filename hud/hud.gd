@@ -4,9 +4,6 @@ extends Control
 func _ready():
 	pass
 	
-func _process(delta):
-	pass
-	
 func set_coin(new_coin) -> void:
 	new_coin.coin_collected.connect(_on_coin_collected)
 	update_coin_label(new_coin.get_coins())

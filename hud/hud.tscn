@@ -1,9 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c16of8mo5wfsg"]
+[gd_scene load_steps=4 format=3 uid="uid://c16of8mo5wfsg"]
 
-[ext_resource type="Texture2D" uid="uid://dadobe3w283nm" path="res://hud/hudKey_red.png" id="1_46ahf"]
 [ext_resource type="Script" path="res://hud/hud.gd" id="1_b4u72"]
 [ext_resource type="Texture2D" uid="uid://dfj5mee53rvt5" path="res://hud/hudCoin.png" id="3_1wu8x"]
-[ext_resource type="Texture2D" uid="uid://bwlj5kd76p6c6" path="res://hud/hudPlayer_yellow.png" id="4_233qq"]
 [ext_resource type="Texture2D" uid="uid://dvdr744jb7fkv" path="res://hud/hudX.png" id="4_tahj1"]
 
 [node name="HUD" type="Control"]
@@ -19,46 +17,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b4u72")
 
-[node name="key" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(43, 123)
-scale = Vector2(0.65625, 0.65625)
-texture = ExtResource("1_46ahf")
-
 [node name="coin" type="Sprite2D" parent="."]
-position = Vector2(229, 43)
+position = Vector2(43, 41)
 scale = Vector2(0.656, 0.656)
 texture = ExtResource("3_1wu8x")
 
-[node name="life" type="Sprite2D" parent="."]
-position = Vector2(39, 43)
-scale = Vector2(0.656, 0.656)
-texture = ExtResource("4_233qq")
-
 [node name="x" type="Sprite2D" parent="."]
-position = Vector2(283, 44)
-scale = Vector2(0.656, 0.656)
-texture = ExtResource("4_tahj1")
-
-[node name="x3" type="Sprite2D" parent="."]
-position = Vector2(93, 44)
+position = Vector2(104, 40)
 scale = Vector2(0.656, 0.656)
 texture = ExtResource("4_tahj1")
 
 [node name="coin_label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 10.0
-offset_right = 359.0
-offset_bottom = 46.0
-scale = Vector2(3, 3)
-text = "0"
-
-[node name="life_label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 126.0
-offset_top = 10.0
-offset_right = 166.0
-offset_bottom = 36.0
+offset_left = 137.0
+offset_top = 7.0
+offset_right = 184.0
+offset_bottom = 43.0
 scale = Vector2(3, 3)
 text = "0"

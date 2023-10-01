@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://cl74ygxud8hlc"]
+
+[ext_resource type="Script" path="res://menu/victory.gd" id="1_5l6q8"]
+[ext_resource type="Texture2D" uid="uid://v1wyfkmscqfr" path="res://menu/alienYellow_front.png" id="1_s2dw1"]
+[ext_resource type="Texture2D" uid="uid://d1rmtgjfljkyp" path="res://menu/alienYellow_duck.png" id="2_h60jf"]
+[ext_resource type="Texture2D" uid="uid://c5y7w7ur21x45" path="res://menu/alienYellow_climb1.png" id="3_gwawm"]
+[ext_resource type="Texture2D" uid="uid://bkubg4ukroa1t" path="res://menu/alienYellow_climb2.png" id="4_eri08"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkfa7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s2dw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h60jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_s2dw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_h60jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_s2dw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gwawm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eri08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gwawm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eri08")
+}],
+"loop": true,
+"name": &"dance",
+"speed": 4.0
+}]
+
+[node name="Victory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5l6q8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 172.0
+offset_right = 553.0
+offset_bottom = 198.0
+scale = Vector2(3, 3)
+text = "YOU WIN!"
+horizontal_alignment = 1
+
+[node name="Menu_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 535.0
+offset_right = 616.0
+offset_bottom = 566.0
+scale = Vector2(1.5, 1.5)
+text = "Back to Menu"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(592, 316)
+sprite_frames = SubResource("SpriteFrames_kkfa7")
+animation = &"dance"
+
+[connection signal="pressed" from="Menu_button" to="." method="_on_menu_button_pressed"]

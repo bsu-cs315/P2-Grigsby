@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lo4pf0hjlp8k"
-path="res://.godot/imported/keyRed.png-1fbea6a46223c845a758623c2441d7d8.ctex"
+uid="uid://bkubg4ukroa1t"
+path="res://.godot/imported/alienYellow_climb2.png-e1520d6ef4fa935f1f71c5c715510577.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/keyRed.png"
-dest_files=["res://.godot/imported/keyRed.png-1fbea6a46223c845a758623c2441d7d8.ctex"]
+source_file="res://menu/alienYellow_climb2.png"
+dest_files=["res://.godot/imported/alienYellow_climb2.png-e1520d6ef4fa935f1f71c5c715510577.ctex"]
 
 [params]
 

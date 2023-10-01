@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckb2dqxkjyhdq"
-path="res://.godot/imported/grassHalf.png-fed3110b7bbac68e9a8a367592344ab7.ctex"
+uid="uid://bocalon05psko"
+path="res://.godot/imported/flagGreen1.png-db34d913c79c099735d0478906897fd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://world/grassHalf.png"
-dest_files=["res://.godot/imported/grassHalf.png-fed3110b7bbac68e9a8a367592344ab7.ctex"]
+source_file="res://objects/flagGreen1.png"
+dest_files=["res://.godot/imported/flagGreen1.png-db34d913c79c099735d0478906897fd2.ctex"]
 
 [params]
 

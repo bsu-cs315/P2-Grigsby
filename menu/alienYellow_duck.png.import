@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgn4io2nbyd3i"
-path="res://.godot/imported/slimeBlue_hit.png-53155fd045c4c6ddc18e2a7cebda731a.ctex"
+uid="uid://d1rmtgjfljkyp"
+path="res://.godot/imported/alienYellow_duck.png-30d618267a077ca5c2f1cc15ff4eaa37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/slimeBlue_hit.png"
-dest_files=["res://.godot/imported/slimeBlue_hit.png-53155fd045c4c6ddc18e2a7cebda731a.ctex"]
+source_file="res://menu/alienYellow_duck.png"
+dest_files=["res://.godot/imported/alienYellow_duck.png-30d618267a077ca5c2f1cc15ff4eaa37.ctex"]
 
 [params]
 
