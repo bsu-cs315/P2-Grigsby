@@ -4,9 +4,9 @@ Press LEFT/RIGHT to move
 <br>Press SPACE to jump
 ## Third-Party Assets
 -[Kenney's Platformer Pack Redux](https://kenney.nl/assets/platformer-pack-redux), licensed under CC0.
--[musical experiment.wav from freesound by betabeats](https://freesound.org/people/betabeats./sounds/702252/) 
--[Victor Fanfare.wav from freesound by humandoide9000](https://freesound.org/people/humanoide9000/sounds/466133/)
--[Failure 1.wav from freesound by FunWithSound](https://freesound.org/people/FunWithSound/sounds/394900/)
+<br>-[musical experiment.wav from freesound by betabeats](https://freesound.org/people/betabeats./sounds/702252/) 
+<br>-[Victor Fanfare.wav from freesound by humandoide9000](https://freesound.org/people/humanoide9000/sounds/466133/)
+<br>-[Failure 1.wav from freesound by FunWithSound](https://freesound.org/people/FunWithSound/sounds/394900/)
 ## Project Report
 ### Reflection
 This was hard to do in one week.  I did come up with some good ideas of juice, though.  Most notable were the two I used for the victory screen: the player character dancing using the climbing and ducking sprites, and the color-changing text.  I came up with the dancing and color changing on my own because I thought it would be a good look for a victory screen.  I also used a tween on the title screen, which I did because we did it with the previous project.  I think I should get an A.
