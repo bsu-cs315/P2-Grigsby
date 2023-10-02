@@ -4,9 +4,9 @@ extends Control
 func _ready():
 	pass
 	
-func set_coin(new_coin) -> void:
-	new_coin.coin_collected.connect(_on_coin_collected)
-	update_coin_label(new_coin.get_coins())
+func set_alien(new_alien) -> void:
+	new_alien.coin_collected.connect(_on_coin_collected)
+	update_coin_label(new_alien.get_coins())
 
 func _on_coin_collected(new_coins):
 	update_coin_label(new_coins)

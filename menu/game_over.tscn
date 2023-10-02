@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://66gma476wymi"]
+[gd_scene load_steps=3 format=3 uid="uid://66gma476wymi"]
 
 [ext_resource type="Script" path="res://menu/game_over.gd" id="1_kgekk"]
+[ext_resource type="AudioStream" uid="uid://bcysh52nftrwy" path="res://menu/394900__funwithsound__failure-1.wav" id="2_kabr3"]
 
 [node name="Game_over" type="Control"]
 layout_mode = 3
@@ -28,5 +29,9 @@ offset_right = 590.0
 offset_bottom = 367.0
 scale = Vector2(2, 2)
 text = "Back to Menu"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_kabr3")
+volume_db = 5.0
 
 [connection signal="pressed" from="Menu_button" to="." method="_on_menu_button_pressed"]

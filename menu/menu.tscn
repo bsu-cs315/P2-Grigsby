@@ -13,10 +13,10 @@ script = ExtResource("1_njbt8")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 396.0
-offset_top = 171.0
-offset_right = 530.0
-offset_bottom = 197.0
+offset_left = 397.0
+offset_top = 649.0
+offset_right = 531.0
+offset_bottom = 675.0
 scale = Vector2(3, 3)
 text = "Platformer Game"
 

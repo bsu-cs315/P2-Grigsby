@@ -11,7 +11,7 @@ func move_left():
 func move_right():
 	velocity.x = 100
 	$AnimatedSprite2D.play("walk")
-func _physics_process(delta):
+func _physics_process(_delta):
 	if velocity.x > 0:
 		$AnimatedSprite2D.scale.x = -1
 	elif velocity.x < 0:

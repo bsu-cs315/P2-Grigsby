@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cl74ygxud8hlc"]
+[gd_scene load_steps=8 format=3 uid="uid://cl74ygxud8hlc"]
 
 [ext_resource type="Script" path="res://menu/victory.gd" id="1_5l6q8"]
 [ext_resource type="Texture2D" uid="uid://v1wyfkmscqfr" path="res://menu/alienYellow_front.png" id="1_s2dw1"]
 [ext_resource type="Texture2D" uid="uid://d1rmtgjfljkyp" path="res://menu/alienYellow_duck.png" id="2_h60jf"]
 [ext_resource type="Texture2D" uid="uid://c5y7w7ur21x45" path="res://menu/alienYellow_climb1.png" id="3_gwawm"]
 [ext_resource type="Texture2D" uid="uid://bkubg4ukroa1t" path="res://menu/alienYellow_climb2.png" id="4_eri08"]
+[ext_resource type="AudioStream" uid="uid://dukpai24jyu47" path="res://menu/466133__humanoide9000__victory-fanfare.wav" id="6_enmxy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kkfa7"]
 animations = [{
@@ -74,4 +75,12 @@ position = Vector2(592, 316)
 sprite_frames = SubResource("SpriteFrames_kkfa7")
 animation = &"dance"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_enmxy")
+volume_db = 5.0
+
 [connection signal="pressed" from="Menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

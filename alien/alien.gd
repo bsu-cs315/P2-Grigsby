@@ -1,13 +1,17 @@
 extends CharacterBody2D
 
+signal coin_collected(new_coins)
+
 const JUMP_VELOCITY = -700.0
 const SPEED = 300.0
+
+@onready var _animated_sprite := $AnimatedSprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
-
-@onready var _animated_sprite := $AnimatedSprite2D
+var coins := 0
+var original_coins := 0
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -38,5 +42,11 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	if coins != original_coins:
+		coin_collected.emit(coins)
+	
 	if position.y > 550:
 		get_tree().change_scene_to_file("res://menu/game_over.tscn")
+		
+func get_coins():
+	return coins
