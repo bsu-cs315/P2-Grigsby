@@ -9,7 +9,7 @@ Press LEFT/RIGHT to move
 <br>-[Failure 1.wav from freesound by FunWithSound](https://freesound.org/people/FunWithSound/sounds/394900/)
 ## Project Report
 ### Reflection
-This was hard to do in one week.  I did come up with some good ideas of juice, though.  Most notable were the two I used for the victory screen: the player character dancing using the climbing and ducking sprites, and the color-changing text.  I came up with the dancing and color changing on my own because I thought it would be a good look for a victory screen.  I also used a tween on the title screen, which I did because we did it with the previous project.  I think I should get an A.
+This was hard to do in one week.  My final product is very simple, to the point where you only have to jump once, and the coins are completely useless.  I did come up with some good ideas of juice, though.  Most notable were the two I used for the victory screen: the player character dancing using the climbing and ducking sprites, and the color-changing text.  I came up with the dancing and color changing on my own because I thought it would be a good look for a victory screen, especially when I realized the climbing animation looks like the alien is dancing.  I also used a tween on the title screen, which I did because we did it with the previous project.  I think I should get an A.
 ### Evaluation
 - [X] D-1: The repository contains a <code>README.md</code> file in its top-level directory on the default branch.
 - [X] D-2: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of M or less.
@@ -29,7 +29,7 @@ This was hard to do in one week.  I did come up with some good ideas of juice, t
 - [X] B-5: Include sound effects and music.
 - [X] B-6: Include a HUD that tracks game-appropriate data such as score or time remaining.
 - [X] B-7: Include a clear example of <em>juice</em> beyond sound effects, which we have already done. Describe your example in the <code>README.md</code>.
-- [ ] A-1: Generate neither warnings nor errors at runtime.
+- [X] A-1: Generate neither warnings nor errors at runtime.
 - [X] A-2: Include two clear examples of <em>juice</em> beyond sound effects and describe them in the <code>README.md</code>.
 - [X] A-3: Earn two stars.
 - [X] ⭐ Animate the main character using either <code>AnimatedSprite</code> or cutout animation
