@@ -5,7 +5,7 @@ Press LEFT/RIGHT to move
 ## Third-Party Assets
 -[Kenney's Platformer Pack Redux](https://kenney.nl/assets/platformer-pack-redux), licensed under CC0.
 <br>-[musical experiment.wav from freesound by betabeats](https://freesound.org/people/betabeats./sounds/702252/) 
-<br>-[Victor Fanfare.wav from freesound by humandoide9000](https://freesound.org/people/humanoide9000/sounds/466133/)
+<br>-[Victor Fanfare.wav from freesound by humanoide9000](https://freesound.org/people/humanoide9000/sounds/466133/)
 <br>-[Failure 1.wav from freesound by FunWithSound](https://freesound.org/people/FunWithSound/sounds/394900/)
 ## Project Report
 ### Reflection
